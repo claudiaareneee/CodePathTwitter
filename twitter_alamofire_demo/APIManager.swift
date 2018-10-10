@@ -159,6 +159,23 @@ class APIManager: SessionManager {
     }
     
     // MARK: TODO: Retweet
+    func retweet(_ tweet: Tweet, completion: @escaping (Tweet?, Error?) -> ()) -> Void{
+//        tweet.favorited = true
+//        let urlString = "https://api.twitter.com/1.1/favorites/create.json"
+//        let parameters = ["id": tweet.id]
+//
+//
+//        request(urlString, method: .post, parameters: parameters as Parameters, encoding: URLEncoding.queryString).validate().responseJSON(completionHandler: {(response) in
+//            if response.result.isSuccess,
+//                let tweetDictionary = response.result.value as? [String: Any]{
+//                let tweet = Tweet(dictionary: tweetDictionary)
+//                completion(tweet, nil)
+//            } else {
+//                completion(nil, response.result.error)
+//            }
+//        })
+    }
+    
     
     // MARK: TODO: Un-Retweet
     

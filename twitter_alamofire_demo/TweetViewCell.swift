@@ -36,6 +36,8 @@ class TweetViewCell: UITableViewCell {
     }
     
     @IBAction func didTapRetweet(_ sender: Any) {
+        
+        
     }
     
     @IBAction func didTapFavorite(_ sender: Any) {
@@ -82,16 +84,14 @@ class TweetViewCell: UITableViewCell {
             reTweetCountLabel.text = countToString(number: tweet.retweetCount)
             favoriteCountLabel.text = countToString(number: tweet.favoriteCount)
             
-            
-            if tweet.retweeted != nil{
-                retweeted = tweet.retweeted!
-            }
-            
             // MARK: Setting profile picture
             if let image_url = tweet.profile_image_url{
                 profileImageView.setImageWith(image_url as URL)
             }
             
+            if tweet.retweeted != nil{
+                retweeted = tweet.retweeted!
+            }
             favorited = tweet.favorited
             
             if favorited{

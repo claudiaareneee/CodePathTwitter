@@ -2,20 +2,21 @@
 
 **CodePath Twitter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **X** hours spent in total
+Time spent: **15** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] User sees app icon in home screen and styled launch screen. (1pt)
-- [ ] User can sign in using OAuth login flow. (1pt)
-- [ ] User can Logout. (1pt)
-- [ ] Create Data Models for User and Tweet. (1pt)
-- [ ] User can view last 20 tweets from their home timeline with the user profile picture, username, tweet text, and timestamp. (2pts)
-- [ ] User can pull to refresh. (1pt)
-- [ ] User can tap the retweet and favorite buttons in a tweet cell to retweet and/or favorite a tweet. (2pts)
-- [ ] Using AutoLayout, the Tweet cell should adjust it's layout for iPhone 7, Plus and SE device sizes as well as accommodate device rotation. (1pt)
+- [x] User sees app icon in home screen and styled launch screen. (1pt)
+- [x] User can sign in using OAuth login flow. (1pt)
+- [x] User can Logout. (1pt)
+- [x] Create Data Models for User and Tweet. (1pt)
+- [x] User can view last 20 tweets from their home timeline with the user profile picture, username, tweet text, and timestamp. (2pts)
+- [x] User can pull to refresh. (1pt)
+- [x] User can tap the favorite button in a tweet cell to favorite a tweet. (1pts)
+- [ ] User can tap the retweet button in a tweet cell to retweet a tweet. (1pts)
+- [x] Using AutoLayout, the Tweet cell should adjust it's layout for iPhone 7, Plus and SE device sizes as well as accommodate device rotation. (1pt)
 
 The following **stretch** features are implemented:
 
@@ -31,20 +32,25 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. I really had issues interacting with the API, so I would like to talk more about how to properly interface with an API.
+2. I would love to discuss syntax for closures.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/W9OWQYq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/b5eM295.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+- I had challenges with the auto-layout functionality with the retweet, favorite, and comment buttons.
+- I had challenges connecting with the API because I was implementing the load from memory method, so I was not getting fresh data. This is why I was having so much trouble implementing the favorite button. 
 
 ## Credits
 

@@ -36,6 +36,28 @@ class TweetViewCell: UITableViewCell {
     }
     
     @IBAction func didTapRetweet(_ sender: Any) {
+        if (!retweeted) {
+            APIManager.shared.retweet(tweet!){ (tweet: Tweet?, error: Error?) in
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                } else if let tweet = tweet {
+                    print("Successfully favorited tweet \n\(String(describing: tweet.text))")
+                    self.tweet = tweet
+                }
+                
+                
+            }
+        }else{
+            APIManager.shared.unretweet(tweet!){ (tweet: Tweet?, error: Error?) in
+                if let error = error {
+                    print("Error unretweeting tweet: \(error.localizedDescription)")
+                }
+                else if let tweet = tweet{
+                    print("Successfully unretweeted the following Tweet: \n\(String(describing: tweet.text))")
+                    self.tweet = tweet
+                }
+            }
+        }
         
         
     }
@@ -65,9 +87,6 @@ class TweetViewCell: UITableViewCell {
             }
         }
         
-        // TODO: Update cell UI
-        
-        // TODO: Send a POST request to the POST favorites/create endpoint
     }
     
     func refreshData(){
@@ -89,9 +108,8 @@ class TweetViewCell: UITableViewCell {
                 profileImageView.setImageWith(image_url as URL)
             }
             
-            if tweet.retweeted != nil{
-                retweeted = tweet.retweeted!
-            }
+            
+            retweeted = tweet.retweeted
             favorited = tweet.favorited
             
             if favorited{
@@ -100,6 +118,14 @@ class TweetViewCell: UITableViewCell {
             } else {
                 let buttonImage = UIImage(named: "favor-icon")
                 favoriteButton.setImage(buttonImage, for: UIControlState.normal)
+            }
+            
+            if retweeted{
+                let buttonImage = UIImage(named: "retweet-icon-green")
+                retweetButton.setImage(buttonImage, for: UIControlState.normal)
+            } else {
+                let buttonImage = UIImage(named: "retweet-icon")
+                retweetButton.setImage(buttonImage, for: UIControlState.normal)
             }
         }
     }

@@ -2,7 +2,7 @@
 
 **CodePath Twitter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **15** hours spent in total
+Time spent: **17** hours spent in total
 
 ## User Stories
 
@@ -15,7 +15,7 @@ The following **required** functionality is completed:
 - [x] User can view last 20 tweets from their home timeline with the user profile picture, username, tweet text, and timestamp. (2pts)
 - [x] User can pull to refresh. (1pt)
 - [x] User can tap the favorite button in a tweet cell to favorite a tweet. (1pts)
-- [ ] User can tap the retweet button in a tweet cell to retweet a tweet. (1pts)
+- [x] User can tap the retweet button in a tweet cell to retweet a tweet. (1pts)
 - [x] Using AutoLayout, the Tweet cell should adjust it's layout for iPhone 7, Plus and SE device sizes as well as accommodate device rotation. (1pt)
 
 The following **stretch** features are implemented:

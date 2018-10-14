@@ -35,6 +35,9 @@ class TweetViewCell: UITableViewCell {
         }
     }
     
+//    @IBAction func didTapReply(_ sender: Any) {
+//    }
+    
     @IBAction func didTapRetweet(_ sender: Any) {
         if (!retweeted) {
             APIManager.shared.retweet(tweet!){ (tweet: Tweet?, error: Error?) in

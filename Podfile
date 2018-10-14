@@ -12,6 +12,7 @@ target 'twitter_alamofire_demo' do
   pod 'KeychainAccess'
   pod 'TTTAttributedLabel'
   pod 'AFNetworking'
+  # pod 'RSKPlaceholderTextView'
 
   target 'twitter_alamofire_demoTests' do
     inherit! :search_paths

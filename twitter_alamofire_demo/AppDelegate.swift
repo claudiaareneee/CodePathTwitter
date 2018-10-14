@@ -16,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // MARK: Check for logged in user
+        if User.current != nil{
+            // Load and show the login view controller
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeTimelineViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
+            window?.rootViewController = homeTimelineViewController
+        }
+        
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "didLogout"), object: nil, queue: OperationQueue.main){ (Notification) in
             
             print("logout notificaion recieved")

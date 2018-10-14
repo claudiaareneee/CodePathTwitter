@@ -8,7 +8,8 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CreateViewControllerDelegate{
+    
     @IBOutlet weak var tableView: UITableView!
     
     var tweets: [Tweet] = []
@@ -24,8 +25,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         // add refresh control to table view
         tableView.insertSubview(refreshControl, at: 0)
-        
-//        tableView.rowHeight = UITableViewAutomaticDimension
         
         //Reload Data
         tableView.dataSource = self
@@ -70,6 +69,25 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    func did(post: Tweet) {
+        getData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("HERE")
+        if(segue.identifier == "DetailSegue"){
+            let cell = sender as! UITableViewCell
+            if let indexPath = tableView.indexPath(for: cell){
+                let tweet = tweets[indexPath.row]
+                if let detailVC = segue.destination as? DetailViewController{
+                    print("third")
+                    detailVC.tweet = tweet
+                }
+            }
+        }else if(segue.identifier == "newPostSegue"){
+            print("Posting")
+        }
+    }
     
     func refreshControlAction(_ refreshControl: UIRefreshControl){
         // Request:

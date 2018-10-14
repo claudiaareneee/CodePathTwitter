@@ -32,12 +32,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         getData()
     }
     
-    // MARK: Logout
-    @IBAction func logout(_ sender: Any) {
-        print("attempting logout")
-        APIManager.logout()
-    }
-    
     
     // MARK: Data Request
     func getData(){
@@ -86,6 +80,11 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }else if(segue.identifier == "newPostSegue"){
             print("Posting")
+        }else if(segue.identifier == "currentProfileSegue"){
+            let user = User.current
+            if let profileViewController = segue.destination as? ProfileViewController{
+                profileViewController.user = user
+            }
         }
     }
     

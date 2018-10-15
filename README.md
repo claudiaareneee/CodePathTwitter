@@ -2,7 +2,7 @@
 
 **CodePath Twitter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **17** hours spent in total
+Time spent: **27** hours spent in total
 
 ## User Stories
 
@@ -18,11 +18,16 @@ The following **required** functionality is completed:
 - [x] User can tap the retweet button in a tweet cell to retweet a tweet. (1pts)
 - [x] Using AutoLayout, the Tweet cell should adjust it's layout for iPhone 7, Plus and SE device sizes as well as accommodate device rotation. (1pt)
 
+- [x] User can tap on a tweet to view it in a detail view, with controls to retweet, favorite, and reply.
+- [x] User can compose a new tweet by tapping on a compose button.
+- [x] When composing a tweet, user sees a countdown for the number of characters remaining for the tweet (out of 140)
+- [x] User can view their profile in a profile tab
+
 The following **stretch** features are implemented:
 
-- [ ] The current signed in user will be persisted across restarts. (1pt)
+- [x] The current signed in user will be persisted across restarts. (1pt)
 - [ ] Each tweet should display the relative timestamp for each tweet "8m", "7h". (1pt)
-- [ ] User should be able to unretweet and unfavorite and should decrement the retweet and favorite count. (1pt)
+- [x] User should be able to unretweet and unfavorite and should decrement the retweet and favorite count. (1pt)
 - [ ] Links in tweets are clickable. (2pts)
 - [ ] User can load more tweets once they reach the bottom of the feed using infinite loading similar to the actual Twitter client. (2pts)
 
@@ -41,6 +46,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://i.imgur.com/W9OWQYq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='https://i.imgur.com/b5eM295.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/WdhDxS3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
